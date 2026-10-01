@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu | Amaira's Aroma Cafe</title>
+  <meta name="description" content="Hot and iced signature lattes, sweet bakes and savory plates at Amaira's Aroma Cafe. Build your order and see your total." />
+  <meta name="theme-color" content="#944c27" />
+  <meta property="og:title" content="Menu | Amaira's Aroma Cafe" />
+  <meta property="og:description" content="Hot and iced signature lattes, sweet bakes and savory plates at Amaira's Aroma Cafe. Build your order and see your total." />
+  <meta property="og:image" content="assets/images/overall.jpg" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="theme-light">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and navigation -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="nav-logo" href="index.html" aria-label="Amaira's Aroma Cafe home">
+        <img src="assets/images/logocolored.png" alt="Amaira's Aroma Cafe logo" width="72" height="48" />
+      </a>
+
+      <button id="navToggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav aria-label="Main">
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="menu.html" aria-current="page">menu</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">other projects</button>
+            <ul class="dropdown-content">
+              <li>Amaira's Atelier <span>Coming soon</span></li>
+              <li>Amaira's Art Studio <span>Coming soon</span></li>
+              <li>Amaira's Bookstore <span>Coming soon</span></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+
+    <!-- Menu -->
+    <section class="section">
+      <div class="section-header">
+        <span class="eyebrow">Our menu</span>
+        <h1>Crafted with care</h1>
+        <p>Every item is made with high-quality ingredients and thoughtful flavor combinations. Tap <strong>+</strong> on anything to add it to your order below.</p>
+      </div>
+
+      <div class="menu-tabs" role="group" aria-label="Filter menu">
+        <button class="menu-tab" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="menu-tab" type="button" data-filter="hot" aria-pressed="false">Hot lattes</button>
+        <button class="menu-tab" type="button" data-filter="iced" aria-pressed="false">Iced lattes</button>
+        <button class="menu-tab" type="button" data-filter="sweet" aria-pressed="false">Sweet</button>
+        <button class="menu-tab" type="button" data-filter="savory" aria-pressed="false">Savory</button>
+      </div>
+
+      <!-- Built from the menuData array in script.js -->
+      <div id="menuContainer"></div>
+
+      <button id="toggleInfoBtn" class="btn-main" type="button" style="margin-top: 32px">More about our drinks</button>
+
+      <div id="moreInfo" class="menu-moreinfo hidden">
+        <p>At Amaira's Aroma Cafe, every drink begins with intention. We use house-crafted syrups, thoughtfully layered flavors, and seasonal ingredients to create lattes that feel both comforting and original. Our menu blends classic cafe staples with creative signature drinks inspired by warmth, nostalgia, and modern design. We prioritize balance over excess sweetness, so each flavor feels refined and approachable.</p>
+        <p>Many of our drinks come with dairy-free options and lighter alternatives without compromising texture or taste. Rather than mass-produced recipes, our drinks are built around consistency, clean presentation, and a calm cafe experience. Whether you're here for a familiar vanilla latte or a seasonal specialty, our goal is a cup that feels curated, cozy, and unmistakably Amaira.</p>
+      </div>
+    </section>
+
+    <!-- Order + price estimator -->
+    <section class="section" id="order" aria-labelledby="orderHeading">
+      <div class="section-header">
+        <span class="eyebrow">Price estimator</span>
+        <h2 id="orderHeading">Your order</h2>
+        <p>Totals include 9.25% Texas sales tax. Pick a tip and your total updates instantly.</p>
+      </div>
+
+      <div class="order-layout">
+        <div>
+          <ul id="orderLines" class="order-lines" aria-live="polite"></ul>
+          <button id="clearOrderBtn" class="link-btn hidden" type="button">Clear order</button>
+
+          <div class="field" style="margin-top: 22px; max-width: 260px">
+            <label for="tipSelect">Tip</label>
+            <select id="tipSelect">
+              <option value="0">No tip</option>
+              <option value="0.10">10%</option>
+              <option value="0.15" selected>15%</option>
+              <option value="0.20">20%</option>
+              <option value="0.25">25%</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="receipt">
+          <h3>Estimated total</h3>
+          <div id="priceResult" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span data-year>2026</span> Amaira's Aroma Cafe. All rights reserved.</span>
+      <span>Open daily 7am to 9pm · Austin, TX</span>
+    </div>
+  </footer>
+
+  <!-- Light / dark mode toggle -->
+  <button id="modeBtn" class="mode-toggle" type="button" aria-pressed="false">
+    <span class="mode-icon" aria-hidden="true">🌙</span>
+    <span class="mode-label">Dark mode</span>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

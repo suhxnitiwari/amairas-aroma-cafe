@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Amaira's Aroma Cafe</title>
+  <meta name="description" content="Questions, event bookings or feedback? Send Amaira's Aroma Cafe a message." />
+  <meta name="theme-color" content="#944c27" />
+  <meta property="og:title" content="Contact | Amaira's Aroma Cafe" />
+  <meta property="og:description" content="Questions, event bookings or feedback? Send Amaira's Aroma Cafe a message." />
+  <meta property="og:image" content="assets/images/overall.jpg" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="theme-light">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header and navigation -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="nav-logo" href="index.html" aria-label="Amaira's Aroma Cafe home">
+        <img src="assets/images/logocolored.png" alt="Amaira's Aroma Cafe logo" width="72" height="48" />
+      </a>
+
+      <button id="navToggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav aria-label="Main">
+        <ul id="navLinks" class="nav-links">
+          <li><a href="index.html">home</a></li>
+          <li><a href="menu.html">menu</a></li>
+          <li><a href="community.html">community</a></li>
+          <li><a href="contact.html" aria-current="page">contact</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" type="button" aria-expanded="false">other projects</button>
+            <ul class="dropdown-content">
+              <li>Amaira's Atelier <span>Coming soon</span></li>
+              <li>Amaira's Art Studio <span>Coming soon</span></li>
+              <li>Amaira's Bookstore <span>Coming soon</span></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section class="section">
+      <div class="contact-layout">
+
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h1>Send us a message</h1>
+          <p>Planning a birthday, booking a study room, or just want to tell us about your favorite latte? We'd love to hear from you.</p>
+
+          <ul class="contact-details">
+            <li><strong>Hours</strong>Open daily, 7am to 9pm</li>
+            <li><strong>Location</strong>Austin, Texas</li>
+            <li><strong>Private events</strong>Galentines, birthdays, study groups and more</li>
+          </ul>
+        </div>
+
+        <div>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError" />
+              <span id="nameError" class="field-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="emailError" />
+              <span id="emailError" class="field-error"></span>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" maxlength="500" required aria-describedby="messageError charCount"></textarea>
+              <span id="charCount" class="char-count"></span>
+              <span id="messageError" class="field-error"></span>
+            </div>
+
+            <button class="btn-main" type="submit">Send message</button>
+
+            <p id="formError" class="form-error hidden" role="alert"></p>
+          </form>
+
+          <div id="thankYou" class="thank-you hidden" role="status"></div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© <span data-year>2026</span> Amaira's Aroma Cafe. All rights reserved.</span>
+      <span>Open daily 7am to 9pm · Austin, TX</span>
+    </div>
+  </footer>
+
+  <!-- Light / dark mode toggle -->
+  <button id="modeBtn" class="mode-toggle" type="button" aria-pressed="false">
+    <span class="mode-icon" aria-hidden="true">🌙</span>
+    <span class="mode-label">Dark mode</span>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
