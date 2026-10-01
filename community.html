@@ -3,168 +3,227 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community | Amaira's Aroma Cafe</title>
+  <title>Community · Amaira's Aroma Cafe</title>
   <meta name="description" content="Birthdays, study nights, open mics and favorite drinks of the month at Amaira's Aroma Cafe." />
-  <meta name="theme-color" content="#944c27" />
-  <meta property="og:title" content="Community | Amaira's Aroma Cafe" />
+  <meta name="theme-color" content="#1c0e07" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Community · Amaira's Aroma Cafe" />
   <meta property="og:description" content="Birthdays, study nights, open mics and favorite drinks of the month at Amaira's Aroma Cafe." />
-  <meta property="og:image" content="assets/images/overall.jpg" />
+  <meta property="og:image" content="assets/images/hero-cafe.jpg" />
   <link rel="icon" href="assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="theme-light">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header and navigation -->
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="nav-logo" href="index.html" aria-label="Amaira's Aroma Cafe home">
-        <img src="assets/images/logocolored.png" alt="Amaira's Aroma Cafe logo" width="72" height="48" />
+      <a class="wordmark" href="index.html" aria-label="Amaira's Aroma Cafe, home">
+        <span class="wordmark-name">Amaira's</span>
+        <span class="wordmark-sub">Aroma Cafe</span>
       </a>
-
-      <button id="navToggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
 
       <nav aria-label="Main">
         <ul id="navLinks" class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="menu.html">menu</a></li>
-          <li><a href="community.html" aria-current="page">community</a></li>
-          <li><a href="contact.html">contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="community.html" aria-current="page">Community</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li class="dropdown">
-            <button class="dropbtn" type="button" aria-expanded="false">other projects</button>
+            <button class="dropbtn" type="button" aria-expanded="false">The family</button>
             <ul class="dropdown-content">
-              <li>Amaira's Atelier <span>Coming soon</span></li>
-              <li>Amaira's Art Studio <span>Coming soon</span></li>
-              <li>Amaira's Bookstore <span>Coming soon</span></li>
+              <li>Amaira's Atelier <span>Soon</span></li>
+              <li>Amaira's Art Studio <span>Soon</span></li>
+              <li>Amaira's Bookstore <span>Soon</span></li>
             </ul>
           </li>
+          <li><a class="nav-cta" href="menu.html#order">Order ahead</a></li>
         </ul>
       </nav>
+
+      <div class="nav-tools">
+        <button id="modeBtn" class="icon-btn" type="button" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">☾</span>
+          <span class="mode-label visually-hidden">Switch to dark mode</span>
+        </button>
+        <button id="navToggle" class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main" class="page">
+  <main id="main">
 
-    <!-- Intro -->
-    <section class="section reveal">
-      <div class="section-header" style="max-width: 900px">
-        <span class="eyebrow">Community</span>
-        <h1>More than coffee</h1>
-        <p>Amaira's Aroma Cafe is where birthdays happen, friendships grow, study groups meet, and quiet moments feel warm and intentional. The space is built for connection, from shared tables and quiet booths to welcoming service that makes every guest feel recognized.</p>
-        <p>Just like our drinks are layered with thoughtful flavor, every moment here is meant to feel refined and memorable. Guests come back not only for the coffee, but for the sense of belonging, creativity and comfort.</p>
+    <section class="page-hero">
+      <img src="assets/images/banner-community.jpg" alt="" fetchpriority="high" />
+      <div class="container">
+        <span class="eyebrow load-in" style="--d:0">Community</span>
+        <h1 class="load-in" style="--d:1">More than <em>coffee.</em></h1>
+        <p class="load-in" style="--d:2">Where birthdays happen, friendships grow, study groups meet and quiet moments feel warm.</p>
       </div>
     </section>
 
-    <!-- Favorite drinks carousel -->
-    <section class="section reveal" aria-labelledby="drinksHeading">
-      <div class="section-header">
-        <span class="eyebrow">Fan favorites</span>
-        <h2 id="drinksHeading">Favorite drinks this month</h2>
-        <p>The signature drinks our guests loved most this month.</p>
-      </div>
-
-      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Favorite drinks">
-        <div class="carousel-frame">
-          <button class="carousel-arrow left" type="button" aria-label="Previous drink">&#10094;</button>
-          <button class="carousel-arrow right" type="button" aria-label="Next drink">&#10095;</button>
-          <img class="carousel-slide active" src="assets/images/longmango.jpg" alt="Iced Mango Latte" data-caption="Iced Mango Latte: bright, creamy and tropical." />
-          <img class="carousel-slide" src="assets/images/longtiramusi.jpg" alt="Iced Tiramisu Latte" data-caption="Iced Tiramisu Latte: mascarpone foam, cocoa and ladyfingers." loading="lazy" />
-          <img class="carousel-slide" src="assets/images/flight.jpg" alt="Signature latte flight" data-caption="Signature Flight: four minis, perfect for sharing." loading="lazy" />
-        </div>
-        <div class="carousel-footer">
-          <p class="carousel-caption" aria-live="polite"></p>
-          <div class="carousel-dots"></div>
-        </div>
+    <section class="section">
+      <div class="container statement reveal">
+        <svg class="ornament" viewBox="0 0 54 20" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M0 10h18M36 10h18"/><path d="M27 2c-4 4-4 12 0 16 4-4 4-12 0-16Z"/><circle cx="27" cy="10" r="1.2" fill="currentColor"/></svg>
+        <p>The space is built for connection, from shared tables and quiet booths to service that makes every guest <em>feel recognized.</em></p>
       </div>
     </section>
 
-    <!-- Events -->
-    <section class="section reveal" aria-labelledby="eventsHeading">
-      <div class="section-header">
-        <span class="eyebrow">What's on</span>
-        <h2 id="eventsHeading">Latest events</h2>
-        <p>What's happening soon at Amaira's.</p>
-      </div>
-
-      <div class="events-grid">
-        <div class="event-card">
-          <span class="event-icon" aria-hidden="true">📚</span>
-          <h3>Community Study Night</h3>
-          <p>Tuesdays, 6 to 9pm</p>
-        </div>
-        <div class="event-card">
-          <span class="event-icon" aria-hidden="true">☕</span>
-          <h3>Latte Flight Fridays</h3>
-          <p>Fridays, 4 to 7pm</p>
-        </div>
-        <div class="event-card">
-          <span class="event-icon" aria-hidden="true">🎤</span>
-          <h3>Open Mic Mini Sets</h3>
-          <p>First Saturday of each month</p>
-        </div>
-        <div class="event-card">
-          <span class="event-icon" aria-hidden="true">🌿</span>
-          <h3>Sunday Reset</h3>
-          <p>Sundays, 10am to 12pm</p>
-        </div>
-      </div>
-
-      <button id="toggleCalendarBtn" class="btn-main" type="button">View this month's calendar</button>
-
-      <div id="calendarBox" class="calendar-box hidden">
-        <div class="calendar-grid">
-          <div class="calendar-week"><strong>Week 1</strong><span>Study Night + Latte Flight Friday</span></div>
-          <div class="calendar-week"><strong>Week 2</strong><span>Study Night + Sunday Reset</span></div>
-          <div class="calendar-week"><strong>Week 3</strong><span>Study Night + Latte Flight Friday</span></div>
-          <div class="calendar-week"><strong>Week 4</strong><span>Open Mic Saturday + Sunday Reset</span></div>
+    <section class="section section-alt" aria-labelledby="drinksHeading">
+      <div class="container">
+        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Favorite drinks this month">
+          <div class="section-head">
+            <div class="reveal">
+              <span class="eyebrow">Fan favorites</span>
+              <h2 id="drinksHeading">This month's <em>most loved.</em></h2>
+            </div>
+            <div class="gallery-controls reveal">
+              <button class="round-btn carousel-arrow left" type="button" aria-label="Previous drink">←</button>
+              <button class="round-btn carousel-arrow right" type="button" aria-label="Next drink">→</button>
+            </div>
+          </div>
+          <div class="carousel-frame reveal-img">
+            <img class="carousel-slide active" src="assets/images/longmango.jpg" alt="Iced Mango Latte" data-caption="Iced Mango Latte: bright, creamy and tropical." />
+            <img class="carousel-slide" src="assets/images/longtiramusi.jpg" alt="Iced Tiramisu Latte" data-caption="Iced Tiramisu Latte: mascarpone, cocoa and ladyfingers." loading="lazy" />
+            <img class="carousel-slide" src="assets/images/flight.jpg" alt="Signature latte flight" data-caption="The Signature Flight: four minis, made for sharing." loading="lazy" />
+          </div>
+          <div class="carousel-footer">
+            <p class="carousel-caption" aria-live="polite"></p>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Happy moments carousel -->
-    <section class="section reveal" aria-labelledby="momentsHeading">
-      <div class="section-header">
-        <span class="eyebrow">Happy moments</span>
-        <h2 id="momentsHeading">Made here</h2>
-        <p>Galentines, school projects, birthdays, work sessions and peaceful solo time.</p>
-      </div>
+    <section class="section" aria-labelledby="eventsHeading">
+      <div class="container">
+        <div class="section-head">
+          <div class="reveal">
+            <span class="eyebrow">What's on</span>
+            <h2 id="eventsHeading">Latest <em>events.</em></h2>
+          </div>
+          <button id="toggleCalendarBtn" class="btn btn-outline reveal" type="button"><span data-label>View this month's calendar</span></button>
+        </div>
 
-      <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Community moments">
-        <div class="carousel-frame">
-          <button class="carousel-arrow left" type="button" aria-label="Previous photo">&#10094;</button>
-          <button class="carousel-arrow right" type="button" aria-label="Next photo">&#10095;</button>
-          <img class="carousel-slide active" src="assets/images/community1.jpg" alt="Friends celebrating Galentine's Day with lattes" data-caption="Galentine's: pink drinks and best friends." loading="lazy" />
-          <img class="carousel-slide" src="assets/images/community2.jpg" alt="Family birthday celebration with cake" data-caption="Birthday celebrations: warm, cozy and photo ready." loading="lazy" />
-          <img class="carousel-slide" src="assets/images/community3.jpg" alt="Students studying together with laptops" data-caption="Group projects: big tables, plenty of outlets." loading="lazy" />
-          <img class="carousel-slide" src="assets/images/community4.jpg" alt="Guest journaling with a latte and croissant" data-caption="Solo time: journaling, a croissant and a sunset." loading="lazy" />
+        <ul class="event-list" data-stagger>
+          <li class="event-item">
+            <span class="event-day">Tue</span>
+            <div><h3>Community Study Night</h3><p>Long tables, late hours and free refills on drip coffee.</p></div>
+            <span class="event-time">6 to 9pm</span>
+          </li>
+          <li class="event-item">
+            <span class="event-day">Fri</span>
+            <div><h3>Latte Flight Fridays</h3><p>Four mini signatures on one board. Perfect for sharing.</p></div>
+            <span class="event-time">4 to 7pm</span>
+          </li>
+          <li class="event-item">
+            <span class="event-day">Sat</span>
+            <div><h3>Open Mic Mini Sets</h3><p>Poetry, acoustic sets and a very supportive crowd.</p></div>
+            <span class="event-time">First Saturday</span>
+          </li>
+          <li class="event-item">
+            <span class="event-day">Sun</span>
+            <div><h3>Sunday Reset</h3><p>Journals, slow pours and a quiet start to the week.</p></div>
+            <span class="event-time">10am to 12pm</span>
+          </li>
+        </ul>
+
+        <div id="calendarBox" class="calendar-box hidden">
+          <div class="calendar-grid">
+            <div class="calendar-week"><strong>Week one</strong><span>Study Night + Latte Flight Friday</span></div>
+            <div class="calendar-week"><strong>Week two</strong><span>Study Night + Sunday Reset</span></div>
+            <div class="calendar-week"><strong>Week three</strong><span>Study Night + Latte Flight Friday</span></div>
+            <div class="calendar-week"><strong>Week four</strong><span>Open Mic Saturday + Sunday Reset</span></div>
+          </div>
         </div>
-        <div class="carousel-footer">
-          <p class="carousel-caption" aria-live="polite"></p>
-          <div class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" aria-labelledby="momentsHeading">
+      <div class="container">
+        <div class="carousel" data-carousel aria-roledescription="carousel" aria-label="Happy moments">
+          <div class="section-head">
+            <div class="reveal">
+              <span class="eyebrow">Happy moments</span>
+              <h2 id="momentsHeading">Made <em>here.</em></h2>
+            </div>
+            <div class="gallery-controls reveal">
+              <button class="round-btn carousel-arrow left" type="button" aria-label="Previous photo">←</button>
+              <button class="round-btn carousel-arrow right" type="button" aria-label="Next photo">→</button>
+            </div>
+          </div>
+          <div class="carousel-frame reveal-img">
+            <img class="carousel-slide active" src="assets/images/community1.jpg" alt="Friends celebrating Galentine's Day with lattes" data-caption="Galentine's: pink drinks and best friends." loading="lazy" />
+            <img class="carousel-slide" src="assets/images/community2.jpg" alt="Family birthday celebration with cake" data-caption="Birthdays: warm, cozy and photo ready." loading="lazy" />
+            <img class="carousel-slide" src="assets/images/community3.jpg" alt="Students studying together with laptops" data-caption="Group projects: big tables, plenty of outlets." loading="lazy" />
+            <img class="carousel-slide" src="assets/images/community4.jpg" alt="Guest journaling with a latte and croissant" data-caption="Solo time: a journal, a croissant and a sunset." loading="lazy" />
+          </div>
+          <div class="carousel-footer">
+            <p class="carousel-caption" aria-live="polite"></p>
+            <div class="carousel-dots"></div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container reveal">
+        <span class="eyebrow center">Celebrate with us</span>
+        <h2>Host your next <em>moment</em> here.</h2>
+        <p>Galentines, birthdays, study groups and showers. Tell us what you're planning.</p>
+        <a class="btn btn-gold" href="contact.html">Plan an event <span class="arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <span>© <span data-year>2026</span> Amaira's Aroma Cafe. All rights reserved.</span>
-      <span>Open daily 7am to 9pm · Austin, TX</span>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="wordmark" href="index.html" aria-label="Amaira's Aroma Cafe, home">
+            <span class="wordmark-name">Amaira's</span>
+            <span class="wordmark-sub">Aroma Cafe</span>
+          </a>
+          <p>Specialty coffee, slow mornings and small celebrations. Named for a little sister with a big imagination.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Austin, Texas</li>
+            <li>Steps from campus</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon to Fri · 7am to 9pm</li>
+            <li>Sat to Sun · 8am to 9pm</li>
+            <li>Study Night · Tue till 11</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="menu.html#order">Order ahead</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Private events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Amaira's Aroma Cafe</span>
+        <span>Designed &amp; built by Suhani Tiwari</span>
+      </div>
     </div>
   </footer>
-
-  <!-- Light / dark mode toggle -->
-  <button id="modeBtn" class="mode-toggle" type="button" aria-pressed="false">
-    <span class="mode-icon" aria-hidden="true">🌙</span>
-    <span class="mode-label">Dark mode</span>
-  </button>
 
   <script src="js/script.js"></script>
 </body>

@@ -3,72 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Amaira's Aroma Cafe</title>
+  <title>Contact · Amaira's Aroma Cafe</title>
   <meta name="description" content="Questions, event bookings or feedback? Send Amaira's Aroma Cafe a message." />
-  <meta name="theme-color" content="#944c27" />
-  <meta property="og:title" content="Contact | Amaira's Aroma Cafe" />
+  <meta name="theme-color" content="#1c0e07" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contact · Amaira's Aroma Cafe" />
   <meta property="og:description" content="Questions, event bookings or feedback? Send Amaira's Aroma Cafe a message." />
-  <meta property="og:image" content="assets/images/overall.jpg" />
+  <meta property="og:image" content="assets/images/hero-cafe.jpg" />
   <link rel="icon" href="assets/images/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="theme-light">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header and navigation -->
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="nav-logo" href="index.html" aria-label="Amaira's Aroma Cafe home">
-        <img src="assets/images/logocolored.png" alt="Amaira's Aroma Cafe logo" width="72" height="48" />
+      <a class="wordmark" href="index.html" aria-label="Amaira's Aroma Cafe, home">
+        <span class="wordmark-name">Amaira's</span>
+        <span class="wordmark-sub">Aroma Cafe</span>
       </a>
-
-      <button id="navToggle" class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
 
       <nav aria-label="Main">
         <ul id="navLinks" class="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="menu.html">menu</a></li>
-          <li><a href="community.html">community</a></li>
-          <li><a href="contact.html" aria-current="page">contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
           <li class="dropdown">
-            <button class="dropbtn" type="button" aria-expanded="false">other projects</button>
+            <button class="dropbtn" type="button" aria-expanded="false">The family</button>
             <ul class="dropdown-content">
-              <li>Amaira's Atelier <span>Coming soon</span></li>
-              <li>Amaira's Art Studio <span>Coming soon</span></li>
-              <li>Amaira's Bookstore <span>Coming soon</span></li>
+              <li>Amaira's Atelier <span>Soon</span></li>
+              <li>Amaira's Art Studio <span>Soon</span></li>
+              <li>Amaira's Bookstore <span>Soon</span></li>
             </ul>
           </li>
+          <li><a class="nav-cta" href="menu.html#order">Order ahead</a></li>
         </ul>
       </nav>
+
+      <div class="nav-tools">
+        <button id="modeBtn" class="icon-btn" type="button" aria-pressed="false">
+          <span class="mode-icon" aria-hidden="true">☾</span>
+          <span class="mode-label visually-hidden">Switch to dark mode</span>
+        </button>
+        <button id="navToggle" class="icon-btn nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main id="main" class="page">
+  <main id="main">
+
+    <section class="page-hero">
+      <img src="assets/images/banner-contact.jpg" alt="" fetchpriority="high" />
+      <div class="container">
+        <span class="eyebrow load-in" style="--d:0">Contact</span>
+        <h1 class="load-in" style="--d:1">Say <em>hello.</em></h1>
+        <p class="load-in" style="--d:2">Planning a celebration, booking a booth, or just want to tell us about your favorite latte? We'd love to hear from you.</p>
+      </div>
+    </section>
+
     <section class="section">
-      <div class="contact-layout">
+      <div class="container contact-layout">
 
-        <div>
-          <span class="eyebrow">Contact</span>
-          <h1>Send us a message</h1>
-          <p>Planning a birthday, booking a study room, or just want to tell us about your favorite latte? We'd love to hear from you.</p>
-
+        <div class="reveal">
+          <span class="eyebrow">Visit</span>
+          <h2>Come <em>sit a while.</em></h2>
           <ul class="contact-details">
-            <li><strong>Hours</strong>Open daily, 7am to 9pm</li>
-            <li><strong>Location</strong>Austin, Texas</li>
-            <li><strong>Private events</strong>Galentines, birthdays, study groups and more</li>
+            <li><strong>Where</strong><span>Austin, Texas</span></li>
+            <li><strong>Weekdays</strong><span>7am to 9pm</span></li>
+            <li><strong>Weekends</strong><span>8am to 9pm</span></li>
+            <li><strong>Events</strong><span>Birthdays, Galentines, study groups and showers</span></li>
           </ul>
         </div>
 
-        <div>
+        <div class="reveal" style="--i:1">
           <form id="contactForm" class="contact-form" novalidate>
             <div class="field">
-              <label for="name">Name</label>
+              <label for="name">Your name</label>
               <input id="name" name="name" type="text" autocomplete="name" required aria-describedby="nameError" />
               <span id="nameError" class="field-error"></span>
             </div>
@@ -86,8 +103,7 @@
               <span id="messageError" class="field-error"></span>
             </div>
 
-            <button class="btn-main" type="submit">Send message</button>
-
+            <button class="btn btn-gold" type="submit">Send message <span class="arrow" aria-hidden="true">→</span></button>
             <p id="formError" class="form-error hidden" role="alert"></p>
           </form>
 
@@ -96,20 +112,50 @@
 
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <span>© <span data-year>2026</span> Amaira's Aroma Cafe. All rights reserved.</span>
-      <span>Open daily 7am to 9pm · Austin, TX</span>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="wordmark" href="index.html" aria-label="Amaira's Aroma Cafe, home">
+            <span class="wordmark-name">Amaira's</span>
+            <span class="wordmark-sub">Aroma Cafe</span>
+          </a>
+          <p>Specialty coffee, slow mornings and small celebrations. Named for a little sister with a big imagination.</p>
+        </div>
+        <div>
+          <h4>Visit</h4>
+          <ul>
+            <li>Austin, Texas</li>
+            <li>Steps from campus</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <ul>
+            <li>Mon to Fri · 7am to 9pm</li>
+            <li>Sat to Sun · 8am to 9pm</li>
+            <li>Study Night · Tue till 11</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="menu.html#order">Order ahead</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="contact.html">Private events</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> Amaira's Aroma Cafe</span>
+        <span>Designed &amp; built by Suhani Tiwari</span>
+      </div>
     </div>
   </footer>
-
-  <!-- Light / dark mode toggle -->
-  <button id="modeBtn" class="mode-toggle" type="button" aria-pressed="false">
-    <span class="mode-icon" aria-hidden="true">🌙</span>
-    <span class="mode-label">Dark mode</span>
-  </button>
 
   <script src="js/script.js"></script>
 </body>
